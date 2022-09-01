@@ -111,7 +111,7 @@ router.put('/upvote', withAuth, (req,res) => {
   });
 
 
-put('/:id', withAuth, (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update({
         title: req.body.title,
         post_content: req.body.post_content

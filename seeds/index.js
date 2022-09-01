@@ -1,0 +1,1 @@
+const seedVotes = require('./vote-seeds');
