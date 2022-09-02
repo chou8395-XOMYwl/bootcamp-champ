@@ -49,3 +49,25 @@ body {
 h1 {
     font-weight: 600;
 }
+
+
+
+
+/* post-info.handlebars styles  */
+
+.card-body, nav{
+    -webkit-box-shadow: 5px 4px 13px -7px rgba(0,0,0,0.51); 
+    box-shadow: 5px 4px 13px -7px rgba(0,0,0,0.51);
+}
+
+.nav-item:hover, .nav-item:active {
+    text-decoration: underline;
+}
+
+.create {
+    margin-right: 15px;
+}
+
+.card-header {
+    height: 60px;
+}
