@@ -1,0 +1,10 @@
+<div class="homepage">
+    <h2 class="mt-4">Welcome to Tech Talk!</h2>
+    <p class="">Click the 'Login' link at the top to either login or sign up to join the discussions.</p>
+
+    {{#each posts as |post|}}
+    {{> post-info post }}
+    {{else}}
+    <h5 class="">there are currently no posts</h5>
+    {{/each}}
+</div>
