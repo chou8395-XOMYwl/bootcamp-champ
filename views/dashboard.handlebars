@@ -1,0 +1,24 @@
+<div class="dashboard">
+    <div class="">
+        <div class="mt-3">
+            <h2 class="">Dashboard: Your posts</h2>
+            <a href="/dashboard/create/">
+                <button id="create-post" class="loginBtns mt-3 mb-3">create post  <i class="bi bi-trophy"></i></button></a>
+        </div>
+        <hr>
+
+        <div class="dashboard-posts">
+            {{#if posts.length}}
+            {{#each posts as |post|}}
+            <a href="/dashboard/edit/{{post.id}}"><button class="btn mb-0 btn-outline-danger">edit post</button></a>
+            {{> post-info post}}
+            <hr>
+        </div>
+    </div>
+    {{/each}}
+
+    {{else}}
+    <h6 class="">you do not currently have any posts</h6>
+    {{/if}}
+
+</div>

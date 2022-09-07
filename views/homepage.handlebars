@@ -1,0 +1,15 @@
+<div>
+    <div class="homepage text-center">
+        <img class="urLogo mt-2" src="/images/richmond-long.png" alt="">
+        <h1 class=" welcome">Welcome to Bootcamp Champ! <span class="black"><i class="bi bi-trophy"></i></span></h1>
+        {{!-- <h1><i class="bi bi-trophy"></i></h1> --}}
+        <p class="homepage-desc">A place for Bootcamp students and alumni to connect!</p>
+        <p class="homepage-login-msg">Log in or sign up at the top to join the discussions.</p>
+    </div>
+
+    {{#each posts as |post|}}
+    {{> post-info post }}
+    {{else}}
+    <h5 class="text-center mt-5">**there are currently no posts**</h5>
+    {{/each}}
+</div>

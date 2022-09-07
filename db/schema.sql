@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS BC_Champ_test;
+
+CREATE DATABASE BC_Champ_test;
