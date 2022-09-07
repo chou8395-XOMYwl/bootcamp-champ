@@ -17,7 +17,7 @@ main {
     border-radius: 20px;
 
 }
-
+ 
 
 .login-signup {
     border-radius: 25px;
@@ -52,6 +52,7 @@ main {
 .loginBtns:hover {
     -webkit-box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.89); 
     box-shadow: 0px 5px 5px -4px rgba(0,0,0,0.89);
+    /* background: linear-gradient(to left, #130856, #b10a0a); */
 }
 
 .nav-link {
@@ -101,6 +102,10 @@ nav {
     margin-left: 10px;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#logout:hover {
+    color: white !important;
 }
 
 
