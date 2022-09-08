@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS BC_Champ_test;
+DROP DATABASE IF EXISTS bc_champ_db;
 
-CREATE DATABASE BC_Champ_test;
+CREATE DATABASE bc_champ_db;
