@@ -57,7 +57,6 @@ main {
     -webkit-box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.89);
     box-shadow: 0px 5px 5px -4px rgba(0, 0, 0, 0.89);
     /* background: linear-gradient(to left, #130856, #b10a0a); */
-    font;
 }
 
 .nav-link {
@@ -90,6 +89,7 @@ nav {
 
 .card-header {
     height: 55px;
+    color: rgb(212, 212, 212);
 }
 
 .card {
@@ -170,3 +170,36 @@ box-shadow: 5px 5px 7px -7px rgba(0,0,0,0.44);
     margin-top: 5px;
 
 }
+
+
+
+/* Animation property */
+/* #create-post {
+    animation: wiggle 3s linear infinite;
+  }
+  
+  /* Keyframes */
+  /* @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-5deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  } */
+   
