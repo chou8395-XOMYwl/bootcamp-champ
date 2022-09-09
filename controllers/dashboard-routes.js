@@ -15,6 +15,7 @@ router.get('/', withAuth, (req, res) => {
         'created_at',
         'post_content'
       ],
+      order: [['created_at', 'DESC']],
       include: [
         {
           model: Comment,
