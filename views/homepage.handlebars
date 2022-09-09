@@ -1,15 +1,63 @@
 <div>
     <div class="homepage text-center">
         <img class="urLogo mt-2" src="/images/richmond-long.png" alt="">
-        <h1 class=" welcome">Welcome to Bootcamp Champ! <span class="black"><i class="bi bi-trophy"></i></span></h1>
+        <h1 class=" welcome">Welcome to Boot Camp Champ! <span class="black"><i class="bi bi-trophy"></i></span></h1>
         {{!-- <h1><i class="bi bi-trophy"></i></h1> --}}
-        <p class="homepage-desc">A place for Bootcamp students and alumni to connect!</p>
-        <p class="homepage-login-msg">Log in or sign up at the top to join the discussions.</p>
+        <p class="homepage-desc">A place for Boot Camp students and alumni to connect!</p>
+        <p class="homepage-login-msg">Log in or sign up to join the discussions.</p>
+        <form action="/login">
+            <button type="submit" class="modal-button btn btn-primary">
+                Login / Sign Up
+            </button>
+            <!-- Button trigger modal -->
+             <button type="button" class="modal-button btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModalCenter">
+                Learn more
+            </button>
+        </form>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">About <i class="bi bi-trophy"></i></h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>Boot Camp Champ</b> is a forum and networking tool for anyone who has been in, completed,
+                            or is interested in the University of Richmond's Web Development and Coding Bootcamp.</p>
+                        <hr>
+                        <p>We welcome questions, sharing resources, and another productive discussions. Enjoy!</p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+
 
     {{#each posts as |post|}}
     {{> post-info post }}
     {{else}}
     <h5 class="text-center mt-5">**there are currently no posts**</h5>
     {{/each}}
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="text-center text-white p-3 footer bg-primary">
+            Thanks for visiting! / <b>Boot Camp Champ <i class="bi bi-trophy"></i></b> /
+            <a class="text-white footer-link" href="/">Homepage</a>
+        </div>
+    </footer>
 </div>
