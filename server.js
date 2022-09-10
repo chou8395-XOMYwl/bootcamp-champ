@@ -42,11 +42,11 @@ app.set('view engine', 'handlebars');
 
 
 // turn on connection to db and server
-// sequelize.sync({ force: false }).then(() => {
-//     app.listen(PORT, () => console.log('Now listening'));
-//   });
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening'));
+  });
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-  sequelize.sync({ force: false });
-});
+// app.listen(PORT, () => {
+//   console.log(`App listening on port ${PORT}!`);
+//   sequelize.sync({ force: false });
+// });
