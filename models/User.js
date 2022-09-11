@@ -24,6 +24,13 @@ class User extends Model {
         type: DataTypes.STRING,
         allowNull: false
       },
+      password: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [4]
+        }
+      },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -32,12 +39,14 @@ class User extends Model {
           isEmail: true
         }
       },
-      password: {
+      github: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [4]
-        }
+        allowNull: true,
+        unique: true,
+      },
+      about: {
+        type: DataTypes.TEXT,
+        allowNull: true,
       }
     },
     {
