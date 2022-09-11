@@ -38,16 +38,16 @@ class User extends Model {
         validate: {
           isEmail: true
         }
-      },
-      github: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        unique: true,
-      },
-      about: {
-        type: DataTypes.TEXT,
-        allowNull: true,
       }
+      // github: {
+      //   type: DataTypes.STRING,
+      //   allowNull: true,
+      //   unique: true,
+      // },
+      // about: {
+      //   type: DataTypes.TEXT,
+      //   allowNull: true,
+      // }
     },
     {
       hooks: {
