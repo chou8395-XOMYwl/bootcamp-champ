@@ -128,8 +128,8 @@ router.get('/users/:id', (req, res) => {
       }
     ]
   })
-    .then(dbPostData => {
-      if (!dbPostData) {
+    .then(dbUserData => {
+      if (!dbUserData) {
         res.status(404).json({ message: 'No user found with this id' });
         return;
       }
@@ -138,7 +138,7 @@ router.get('/users/:id', (req, res) => {
       const user = dbUserData.get({ plain: true });
 
       // pass data to template
-      res.render('single-post', {
+      res.render('user', {
           user,
           loggedIn: req.session.loggedIn
         });
