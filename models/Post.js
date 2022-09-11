@@ -17,10 +17,7 @@ class Post extends Model {
                 'title',
                 'post_content',
                 'created_at',
-                [
-                    sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
-                     'vote_count'
-                ]
+                [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),'vote_count']
             ],
             include: [
               {
@@ -34,8 +31,7 @@ class Post extends Model {
             ]
         });
     });
-}
-
+  }
 };
 
 // create fields/columns for Post model
