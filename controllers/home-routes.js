@@ -6,12 +6,17 @@ router.get('/', (req, res) => {
     console.log(req.session);
     
     Post.findAll({
-      
-      order: [['createdAt', 'DESC']],
+      attributes: [
+        'id',
+        'title',
+        'created_at',
+        'post_content'
+      ],
+      order: [['created_at', 'DESC']],
       include: [
         {
           model: Comment,
-       
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username']
