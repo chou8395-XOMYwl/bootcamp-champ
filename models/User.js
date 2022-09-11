@@ -38,19 +38,19 @@ class User extends Model {
         validate: {
           isEmail: true
         }
-      },
-      github: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      linkedIn: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      about: {
-        type: DataTypes.TEXT,
-        allowNull: true,
       }
+      // github: {
+      //   type: DataTypes.STRING,
+      //   allowNull: true,
+      // },
+      // linkedIn: {
+      //   type: DataTypes.STRING,
+      //   allowNull: true,
+      // },
+      // about: {
+      //   type: DataTypes.TEXT,
+      //   allowNull: true,
+      // }
     },
     {
       hooks: {
