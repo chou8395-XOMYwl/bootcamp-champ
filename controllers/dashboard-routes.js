@@ -126,7 +126,7 @@ router.get('/create/', withAuth, (req, res) => {
     });
 });
 
-router.put('/upvote', (req, res) => {
+router.put('/upvote/:id', (req, res) => {
   if (req.session) {
     Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
     .then(updatedVoteData => res.json(updatedVoteData))
