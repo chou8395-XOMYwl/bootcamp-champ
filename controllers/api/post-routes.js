@@ -90,6 +90,16 @@ router.post('/', withAuth, (req, res) => {
       });
 });
 
+router.put('/upvote', (req, res) => {
+  // custom static method created in models/Post.js
+  Post.upvote(req.body, { Vote, Comment, User })
+    .then(updatedVoteData => res.json(updatedVoteData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 router.put('/:id', withAuth, (req, res) => {
     Post.update({
         title: req.body.title,
