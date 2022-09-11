@@ -9,12 +9,17 @@ router.get('/', withAuth, (req, res) => {
       // use the ID from the session
       user_id: req.session.user_id
     },
-
-    order: [['createdAt', 'DESC']],
+    attributes: [
+      'id',
+      'title',
+      'created_at',
+      'post_content'
+    ],
+    order: [['created_at', 'DESC']],
     include: [
       {
         model: Comment,
-
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -42,11 +47,16 @@ router.get('/edit/:id', withAuth, (req, res) => {
     where: {
       id: req.params.id
     },
-
+    attributes: [
+      'id',
+      'title',
+      'created_at',
+      'post_content'
+    ],
     include: [
       {
         model: Comment,
-
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
         include: {
           model: User,
           attributes: ['username']
@@ -79,8 +89,41 @@ router.get('/edit/:id', withAuth, (req, res) => {
 });
 
 router.get('/create/', withAuth, (req, res) => {
-  res.render('create-post', { loggedIn: true });
-
+  Post.findAll({
+    where: {
+      // use the ID from the session
+      user_id: req.session.user_id
+    },
+    attributes: [
+      'id',
+      'title',
+      'created_at',
+      'post_content'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbPostData => {
+      // serialize data before passing to template
+      const posts = dbPostData.map(post => post.get({ plain: true }));
+      res.render('create-post', { posts, loggedIn: true });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 
