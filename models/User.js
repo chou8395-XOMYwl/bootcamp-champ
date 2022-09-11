@@ -42,12 +42,10 @@ class User extends Model {
       github: {
         type: DataTypes.STRING,
         allowNull: true,
-        unique: true,
       },
       linkedIn: {
         type: DataTypes.STRING,
         allowNull: true,
-        unique: true,
       },
       about: {
         type: DataTypes.TEXT,
