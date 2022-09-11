@@ -1,18 +1,17 @@
-
-    <div class="card post-box mb-5 mt-4">
-        <div class="card-header">
-            <a href="/post/{{id}}" class="text-decoration-none fs-3">{{title}} </a></p>
-        </div>
-        <div class="card-body">
-            <div class="mb-2 post-text">
-                {{post_content}}
-            </div>
-
-            <div class="">
-                <b>{{user.username}}</b>
-                {{vote_count}} {{format_plural "upvote" vote_count}} | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment"
-                    comments.length}}</a>
-            </div>
-        </div>
-
+<div class="card post-box mb-5 mt-4">
+    <div class="card-header">
+        <i class="bi bi-hand-thumbs-up upvote-btn"></i><a href="/post/{{id}}" class="text-decoration-none fs-3">{{title}} </a></p>
     </div>
+    <div class="card-body">
+        <div class="mb-2 post-text">
+            {{post_content}}
+        </div>
+
+        <div class="">
+            <b>{{user.username}}</b>
+            {{vote_count}} {{format_plural "upvote" vote_count}} | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment"
+                comments.length}}</a>
+        </div>
+    </div>
+
+</div>
