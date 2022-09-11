@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav d-flex align-items-end">
 
-                        {{#if loggedIn}}
+                        {{!-- {{#if loggedIn}} --}}
                         <li class="nav-item">
                             <a class="nav-link active" href="/">Homepage</a>
                         </li>
@@ -40,12 +40,12 @@
                             <a class="nav-link active create" href="#" class="">Chat</a>
                         </li>
                         <button class="nav-link btn btn-outline-danger" id="logout" class="">Logout</button>
-                        {{else}}
+                        {{!-- {{else}}
                         <li class="nav-item">
                             <a class="nav-link active" href="/" class="">Homepage</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/login" class="">Login</a>
+                            <a class="nav-link active" href="/login" class="">Login</a> --}}
                             {{!-- <form>
                                 <button class="nav-link btn btn-outline-danger text-decoration-none" id="logIn-Btn"
                                     formaction="/login">Login</button>
@@ -53,7 +53,7 @@
                         </li>
                     </ul>
                 </div>
-                {{/if}}
+                {{!-- {{/if}} --}}
             </div>
             </div>
         </nav>
@@ -65,9 +65,9 @@
 
 
 
-    {{#if loggedIn}}
+    {{!-- {{#if loggedIn}} --}}
     <script src="/javascript/logout.js"></script>
-    {{/if}}
+    {{!-- {{/if}} --}}
 
 
 
