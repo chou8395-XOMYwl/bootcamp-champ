@@ -13,7 +13,8 @@ router.get('/', withAuth, (req, res) => {
       'id',
       'title',
       'created_at',
-      'post_content'
+      'post_content',
+      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     order: [['created_at', 'DESC']],
     include: [
@@ -124,17 +125,6 @@ router.get('/create/', withAuth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});
-
-router.put('/upvote/:id', (req, res) => {
-  if (req.session) {
-    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-    .then(updatedVoteData => res.json(updatedVoteData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-  }
 });
 
 module.exports = router;
