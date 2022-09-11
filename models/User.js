@@ -47,7 +47,7 @@ class User extends Model {
       // about: {
       //   type: DataTypes.TEXT,
       //   allowNull: true,
-      }
+      // }
     },
     {
       hooks: {
