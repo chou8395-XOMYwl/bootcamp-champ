@@ -191,6 +191,10 @@ box-shadow: 5px 5px 7px -7px rgba(0,0,0,0.44);
     color: blue;
 }
 
+.user-card {
+    justify-content: center;
+}
+
 /* Animation property */
 /* #create-post {
     animation: wiggle 3s linear infinite;
