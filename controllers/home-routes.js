@@ -4,14 +4,19 @@ const { Post, User, Comment } = require('../models');
 
 router.get('/', (req, res) => {
     console.log(req.session);
-    
     Post.findAll({
-      
       order: [['createdAt', 'DESC']],
+      attributes: [
+        'id',
+        'post_url',
+        'title',
+        'created_at',
+        [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
+      ],
       include: [
         {
           model: Comment,
-       
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username']
@@ -61,9 +66,10 @@ router.get('/login', (req, res) => {
       },
       attributes: [
         'id',
+        'post_url',
         'title',
         'created_at',
-        'post_content'
+        [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
       ],
       include: [
         {
