@@ -62,6 +62,7 @@ https://nodejs.org/en/
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Link](#link)
   * [Screenshots](#screenshots)
   * [License](#license)
   * [Questions](#questions)
@@ -78,6 +79,12 @@ Finally, run the command 'node server' to run locally"
 
   ## Usage
   Used for forum discussions and networking.
+  
+  ## Link
+  
+  Link to deployed application:
+  
+  https://boot-camp-champ-app.herokuapp.com/  
   
   ## Screenshots
   ![Screenshot (76)](https://user-images.githubusercontent.com/105617274/189571925-28d74c10-83c3-40c0-a79a-a856a06b746b.png)
