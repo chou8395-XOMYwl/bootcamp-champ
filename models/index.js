@@ -36,7 +36,8 @@ Vote.belongsTo(User, {
   
 Vote.belongsTo(Post, {
 foreignKey: 'post_id',
-// onDelete: 'CASCADE'
+onDelete: 'CASCADE',
+hooks: true
 });
 
 User.hasMany(Vote, {
