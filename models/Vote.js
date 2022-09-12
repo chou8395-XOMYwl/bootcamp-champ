@@ -32,7 +32,7 @@ Vote.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'vote',
-        onDelete: 'CASCADE'
+        onDelete: 'CASCADE',
     }
 );
 

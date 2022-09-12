@@ -31,19 +31,21 @@ Post.hasMany(Comment, {
 });
 
 Vote.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
   });
   
-// Vote.belongsTo(Post, {
-// foreignKey: 'post_id',
-// });
+Vote.belongsTo(Post, {
+    foreignKey: 'post_id',
+    onDelete: 'SET NULL'
+});
 
 User.hasMany(Vote, {
-foreignKey: 'user_id'
+    foreignKey: 'user_id'
 });
 
 Post.hasMany(Vote, {
-foreignKey: 'post_id',
+    foreignKey: 'post_id',
 });
 
 module.exports = {User, Post, Comment, Vote};
