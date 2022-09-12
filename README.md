@@ -62,7 +62,7 @@ https://nodejs.org/en/
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Screenshot](#screenshot)
+  * [Screenshots](#screenshots)
   * [License](#license)
   * [Questions](#questions)
 
@@ -79,9 +79,14 @@ Finally, run the command 'node server' to run locally"
   ## Usage
   Used for forum discussions and networking.
   
-  ## Screenshot
-  
+  ## Screenshots
+  ![Screenshot (76)](https://user-images.githubusercontent.com/105617274/189571925-28d74c10-83c3-40c0-a79a-a856a06b746b.png)
 
+![Screenshot (75)](https://user-images.githubusercontent.com/105617274/189571934-38d33e69-1958-4250-b870-de98cfecee26.png)
+
+![Screenshot (78)](https://user-images.githubusercontent.com/105617274/189571953-44a2e4ca-3dea-494a-ac7e-fa7a3ba3b194.png)
+
+![Screenshot (77)](https://user-images.githubusercontent.com/105617274/189571961-f762e387-965e-420d-9863-c72506e86b75.png)
 
   ## License
   MIT
