@@ -32,7 +32,8 @@ Vote.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'vote'
+        modelName: 'vote',
+        onDelete: 'CASCADE'
     }
 );
 
