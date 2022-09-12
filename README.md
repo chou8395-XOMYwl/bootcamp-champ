@@ -115,6 +115,10 @@ Finally, run the command 'node server' to run locally"
   Brennan Vlahcevic
   Email: bvlahcevic5@gmail.com
   Github: https://github.com/BVlah
+  
+  Foster Flowers
+  Email: anis.fflowers@gmail.com
+  Github: https://github.com/fosflowers
 
 
 
