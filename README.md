@@ -100,9 +100,9 @@ Finally, run the command 'node server' to run locally"
   Clark Hou
   Email: chou8395@gmail.com
  
-  
-  ANOTHER CREATOR***
-
+  Brennan Vlahcevic
+  Email: bvlahcevic5@gmail.com
+  Github: https://github.com/BVlah
 
 
 
