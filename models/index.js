@@ -36,8 +36,6 @@ Vote.belongsTo(User, {
   
 Vote.belongsTo(Post, {
 foreignKey: 'post_id',
-onDelete: 'CASCADE',
-hooks: true
 });
 
 User.hasMany(Vote, {
@@ -46,8 +44,6 @@ foreignKey: 'user_id'
 
 Post.hasMany(Vote, {
 foreignKey: 'post_id',
-onDelete: 'CASCADE',
-hooks: true
 });
 
 module.exports = {User, Post, Comment, Vote};
