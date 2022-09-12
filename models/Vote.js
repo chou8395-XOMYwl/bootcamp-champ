@@ -22,7 +22,8 @@ Vote.init(
             references: {
                 model: 'post',
                 key: 'id',
-            }
+            },
+            onDelete: 'CASCADE'
         },
     },
     {
@@ -30,6 +31,7 @@ Vote.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'vote',
+        onDelete: 'CASCADE'
     }
 );
 
